@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Café Experience</title>
+  <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+
+  <!-- HERO IMAGE TOP -->
+  <header class="hero">
+    <img src="images/cafe7.jpg" alt="Warm Cozy Café" class="hero-img">
+    <div class="hero-overlay">
+      <h1>Café Aroma</h1>
+      <p>Premium Coffee & Cozy Ambiance | Indonesia • Malaysia • UAE • Singapore • Worldwide</p>
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="https://wa.me/918822030323?text=Hello%20Café%20Aroma!%20I%20would%20like%20to%20reserve%20a%20table.%0A%0AName:%20%0ADate:%20%0ATime:%20%0AGuests:%20%0A%0AThank%20you!"
+        class="btn-outline btn-hero">
+        Book via WhatsApp
+      </a>
+
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reservation">Reservation</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>About Café Aroma</h2>
+    <p>
+      A premium café experience inspired by global coffee cultures.
+      From Asian specialty brews to international flavors, we craft the perfect balance of cozy ambiance, artisan
+      pastries, and handcrafted coffee.
+    </p>
+    <img src="images/coffee.jpg" alt="Barista preparing coffee" class="about-img">
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu">
+    <h2>Signature Drinks & Pastries</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/latte.jpg" alt="Caramel Latte">
+        <h3>Caramel Latte</h3>
+        <p>Fresh espresso, silky milk foam, caramel drizzle.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/matcha.jpg" alt="Japanese Matcha">
+        <h3>Japanese Matcha</h3>
+        <p>Premium Uji matcha, honey, light cream blend.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/singaporian-toast.jpg" alt="Kaya Toast">
+        <h3>Kaya Toast</h3>
+        <p>Malaysia’s classic toast with coconut kaya spread.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/croissant.jpg" alt="Butter Croissant">
+        <h3>Butter Croissant</h3>
+        <p>Flaky, golden, oven-fresh daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery">
+    <h2>Our Space</h2>
+    <div class="gallery-grid">
+      <img src="images/cafe-seating.jpg" alt="Café seating">
+      <img src="images/barista-counter.jpg" alt="Coffee preparation counter">
+      <img src="images/out.jpg" alt="Outdoor seating">
+      <img src="images/modern-interior.jpg" alt="Modern interior">
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section id="reservation" class="reservation">
+    <h2>Reserve a Table</h2>
+    <p>For dine-in, private events, and celebrations.</p>
+    <form id="reservationForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="08036011-9e72-4aac-a92c-37c06349ab21">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="number" name="guests" placeholder="How many guests?" min="1" required>
+      <input type="hidden" name="reference" id="ref">
+      <button class="btn-primary" type="submit">Confirm Reservation</button>
+    </form>
+
+    <p id="reservationMessage"></p> <!-- ⭐ Add this -->
+
+    <div class="contact-buttons">
+      <a href="https://wa.me/918822030323?text=Hello%20Café%20Aroma!%20I’m%20interested%20in%20booking%20a%20table.%0A%0AName:%20%0ADate:%20%0ATime:%20%0AGuests:%20%0A%0AAdditional%20Notes:%20%0A%0AThank%20you!"
+        class="btn-outline">
+        Book via WhatsApp
+      </a>
+
+      <a href="https://facebook.com/" class="btn-outline">Contact via Facebook</a>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="location" class="location">
+    <h2>Find Us</h2>
+    <p>Visit Café Aroma and enjoy a premium cozy ambiance.</p>
+
+    <!-- Embedded map showing Aroma Café -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.123456789012!2d55.2708!3d25.2048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43456789abcd%3A0xabcdef1234567890!2sAroma%20Cafe%2C%20Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+      width="100%" height="400" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Aroma+Cafe+Dubai+UAE" target="_blank"
+      class="btn-primary">
+      📍 Open in Google Maps
+    </a>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@cafearoma.com</p>
+    <p>Instagram: @cafearoma</p>
+    <p>WhatsApp: +91 882 203 0323</p>
+    <p>Facebook: <a href="https://facebook.com/cafearoma" target="_blank">Café Aroma FB Page</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Café Aroma | Designed by Moniruzzaman</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="reservation.js"></script>
+</body>
+
+</html>

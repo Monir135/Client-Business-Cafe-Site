@@ -1,0 +1,433 @@
+
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdf7f2;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #fff8f2;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5a3e2b;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #a65a3e;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    max-width: 90%;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #a65a3e;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #8e4930;
+}
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.32);  /* slightly richer, no blur */
+    border: 2px solid #ffffff;                    /* premium clean white */
+    color: #a65a3e;                               /* café latte identity */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);   /* luxury depth, crisp */
+    font-weight: 600;                             /* boutique confidence */
+    letter-spacing: 0.6px;                        /* upscale spacing */
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #a65a3e;
+}
+.btn-hero {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); /* stronger but still elegant */
+}
+
+
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    background-color: #fff8f2;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== MENU ===== */
+.menu {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    display: block;
+}
+
+.menu-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.menu-item p {
+    padding: 0 15px 15px;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    padding: 80px 20px;
+    background-color: #fff8f2;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RESERVATION ===== */
+.reservation {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.reservation h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.reservation p {
+    margin-bottom: 30px;
+}
+
+.reservation form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.reservation input, .reservation button {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.reservation button.btn-primary {
+    border: none;
+    background-color: #a65a3e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reservation button.btn-primary:hover {
+    background-color: #8e4930;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2,.location h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p, .contact a {
+    font-size: 1rem;
+    color: #5a3e2b;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact a:hover {
+    color: #a65a3e;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8f2;
+    color: #5a3e2b;
+    font-weight: 600;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation form {
+        flex-direction: column;
+    }
+}
+
+/* smooth fade-out form */
+.hide-form {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.info-message {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* confirmation style */
+.confirmation-box {
+  padding: 30px;
+  border-radius: 14px;
+  background: #e9ffef;
+  border: 2px solid #2ec46f;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.confirmation-title {
+  font-size: 1.6rem;
+  color: #0a8a43;
+  font-weight: 700;
+}
+
+.booking-ref {
+  color: #0a8a43;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* receipt download button */
+.download-btn {
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #0a8a43;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  opacity: 0.8;
+}
+
+/* error styling */
+.error-box {
+  padding: 22px;
+  border-radius: 10px;
+  background: #ffe9e9;
+  border: 2px solid #ff6e6e;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.location {
+  text-align: center;
+  padding: 80px 20px;
+  background: #faf4ec;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background: #6b3e26;
+  font-weight: bold;
+}
