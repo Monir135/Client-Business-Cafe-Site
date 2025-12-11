@@ -3,6 +3,22 @@ const form = document.getElementById('reservationForm');
 const message = document.getElementById('reservationMessage');
 const refInput = document.getElementById("ref");
 
+
+function playConfirmationVoice() {
+  // Check browser supports speech synthesis
+  if ('speechSynthesis' in window) {
+    const msg = new SpeechSynthesisUtterance("Your booking is confirmed. Thank you for choosing Café Aroma!");
+    msg.lang = "en-US";
+    msg.pitch = 1.2;   // slightly higher pitch = cheerful
+    msg.rate = 1;      // normal speed
+    msg.volume = 1;    // full volume
+    window.speechSynthesis.speak(msg);
+  } else {
+    console.log("Speech synthesis not supported in this browser.");
+  }
+}
+
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -35,6 +51,7 @@ form.addEventListener("submit", async function (e) {
     form.classList.add("hide-form");
 
     setTimeout(() => {
+      playConfirmationVoice();
       form.style.display = "none";
 
       message.innerHTML = `
