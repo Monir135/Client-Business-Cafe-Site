@@ -467,34 +467,27 @@ footer {
     }
 }
 
+
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 0;
+        padding: 8px 0;
     }
 
     .navbar ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;      /* ✅ keep horizontal */
+        flex-wrap: wrap;          /* ✅ wrap to next line if needed */
+        gap: 6px 14px;            /* row-gap / column-gap */
+        justify-content: center;
     }
 
     .navbar a {
-        padding: 8px 12px;
-    }
-
-    .hero-overlay h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-overlay p {
-        font-size: 0.98rem;
-    }
-
-    .btn-primary, .btn-outline {
-        width: auto;
-        padding: 12px 22px;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        padding: 6px 10px;
     }
 }
+
+
+
 
 @media (max-width: 480px) {
     .reservation form {
@@ -544,3 +537,4 @@ footer {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
