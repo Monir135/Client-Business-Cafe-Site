@@ -141,4 +141,8 @@ function downloadReceipt(ref, name, date, time, guests) {
 }
 
 
+const currentYear = new Date().getFullYear();
+
+document.getElementById("footerText").textContent =
+  `© ${currentYear} Café Aroma — Concept Demo Website | Designed by Moniruzzaman`;
 
