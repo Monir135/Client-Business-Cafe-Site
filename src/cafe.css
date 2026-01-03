@@ -9,6 +9,14 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -57,11 +65,41 @@ body {
 /* ===== HERO ===== */
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 520px;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    /* ✅ matches 4256×2832 */
+    max-height: 90vh;
+    min-height: 480px;
     overflow: hidden;
     padding: 0 5%;
 }
+
+
+@media (max-width: 1440px) {
+    .hero {
+        aspect-ratio: 16 / 11;
+        /* ~1.45 */
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        aspect-ratio: 4 / 3;
+        /* ~1.33 */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        aspect-ratio: 3 / 4;
+        /* intentionally taller */
+    }
+}
+
+
+
+
+
 
 .hero-img {
     position: absolute;
